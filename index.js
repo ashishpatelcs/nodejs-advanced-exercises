@@ -1,3 +1,6 @@
 const readfs = require('./readFile')
+const writefs = require('./writeFile')
 
-readfs.readDirectoryAsynchronously()
+// readfs.readDirectoryAsynchronously()
+
+writefs.writeFileSynchronously()
