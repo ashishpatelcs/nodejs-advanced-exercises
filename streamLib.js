@@ -22,10 +22,12 @@ let copyFile = () => {
     let writefile = fs.createWriteStream('write.txt')
     readfile.on('data', chunk => {
         writefile.write(chunk)
-        writefile.end()
     })
 
-    readfile.on('end', () => console.log('file copied successfully'))
+    readfile.on('end', () => {
+        console.log('file copied successfully')
+        writefile.end()
+    })
 }
 
 module.exports = {
