@@ -1,20 +1,23 @@
 const buffer = require('buffer').Buffer
 
 let allocateBuffer = () => {
-    let allocbuffer = buffer.alloc(8)
+    //let allocbuffer = buffer.alloc(8)
+    let allocbuffer = new Int8Array(8)
     console.log(allocbuffer)
 }
 
 let bufferFromText = () => {
     let text = `Hello World
     Application is the first Application I've written!`
-    let textbuffer = Buffer.from(text)
+    //let textbuffer = Buffer.from(text)
+    let textbuffer = new Int8Array(text)
     console.log('Text buffer: ');
     console.log(textbuffer);
 }
 
 let writeToBuffer = (data) => {
-    let allocbuffer = buffer.alloc(8)
+    //let allocbuffer = buffer.alloc(8)
+    let allocbuffer = new Int8Array(8)
     console.log('current buffer: ');
     console.log(allocbuffer);
     allocbuffer.write(data)
@@ -23,7 +26,8 @@ let writeToBuffer = (data) => {
 }
 
 let readFromBuffer = () => {
-    let allocbuffer = buffer.alloc(16)
+    //let allocbuffer = buffer.alloc(16)
+    let allocbuffer = new Int8Array(8)
     allocbuffer.write('hello world!')
     console.log(allocbuffer.toString('ascii', 0, 15))
 }
