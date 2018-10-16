@@ -3,4 +3,4 @@ const writefs = require('./writeFile')
 
 // readfs.readDirectoryAsynchronously()
 
-writefs.writeFileSynchronously()
+writefs.writeFileAsynchronously()
