@@ -22,4 +22,4 @@ console.log('Amount of free memory in % : ' + fmemp);
  */
 
 // stream.writeFileStream()
-stream.readFileStream()
+stream.copyFile()

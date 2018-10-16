@@ -17,7 +17,18 @@ let writeFileStream = () => {
     writestream.end( () => console.log('file write end'))
 }
 
+let copyFile = () => {
+    let readfile = fs.createReadStream('example.txt', 'utf-8')
+    let writefile = fs.createWriteStream('write.txt')
+    readfile.on('data', chunk => {
+        writefile.write(chunk)
+    })
+
+    readfile.on('end', () => console.log('file copied successfully'))
+}
+
 module.exports = {
     readFileStream,
-    writeFileStream
+    writeFileStream,
+    copyFile
 }
