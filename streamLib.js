@@ -30,8 +30,31 @@ let copyFile = () => {
     })
 }
 
+// implement a readable stream
+let createReadableStream = () => {
+    let { Readable } = require('stream')
+    const inputStream = new Readable()
+    inputStream.push('hello')
+    inputStream.push('world!')
+    inputStream.push(null) // no more data to push
+    inputStream.pipe(process.stdout)
+}
+
+let createWritableStream = () => {
+    let { Writable } = require('stream')
+    const outputStream = new Writable({
+        write(chunk, encoding, callback) {
+            console.log('Raw input is : ' + chunk)
+            console.log('Encoded input is : ' + chunk.toString());
+            callback()
+        }
+    })
+}
+
 module.exports = {
     readFileStream,
     writeFileStream,
-    copyFile
+    copyFile,
+    createReadableStream,
+    createWritableStream
 }

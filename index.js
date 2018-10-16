@@ -1,6 +1,7 @@
 const readfs = require('./readFile')
 const writefs = require('./writeFile')
 const stream = require('./streamLib')
+const buffer = require('./bufferLib')
 const path = require('path')
 const os = require('os')
 
@@ -22,4 +23,5 @@ console.log('Amount of free memory in % : ' + fmemp);
  */
 
 // stream.writeFileStream()
-stream.copyFile()
+// stream.createReadableStream()
+buffer.readFromBuffer()
