@@ -32,9 +32,35 @@ let readFromBuffer = () => {
     console.log(allocbuffer.toString('ascii', 0, 15))
 }
 
+// buffer operations
+let compareBuffer = () => {
+    let buffer1 = buffer.from('hello world')
+    let buffer2 = buffer.from('hello world')
+    let buffer3 = buffer.from('another buffer')
+    console.log(buffer1.compare(buffer2));
+    console.log(buffer1.compare(buffer3));
+}
+
+let comparePartOfBuffer = () => {
+    let buffer1 = buffer.from('hello world')
+    let buffer2 = buffer.from('hello world')
+    let buffer3 = buffer.from('another buffer')
+    console.log(buffer1.compare(buffer2, 0, buffer1.byteLength, 7));
+    console.log(buffer1.compare(buffer3, 0, buffer1.byteLength, 7));
+}
+
+let copyBuffer = () => {
+    let source = buffer.alloc(8).fill('hello world')
+    let dest = buffer.alloc(8)
+    source.copy(dest)
+}
+
 module.exports = {
     allocateBuffer,
     bufferFromText,
     writeToBuffer,
-    readFromBuffer
+    readFromBuffer,
+    compareBuffer,
+    comparePartOfBuffer,
+    copyBuffer
 }

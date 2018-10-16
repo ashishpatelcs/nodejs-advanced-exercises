@@ -24,4 +24,4 @@ console.log('Amount of free memory in % : ' + fmemp);
 
 // stream.writeFileStream()
 // stream.createReadableStream()
-buffer.readFromBuffer()
+buffer.comparePartOfBuffer()
