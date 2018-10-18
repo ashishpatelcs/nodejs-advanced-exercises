@@ -4,6 +4,7 @@ const stream = require('./streamLib')
 const buffer = require('./bufferLib')
 const path = require('path')
 const os = require('os')
+const buff = require('./buffer-ex')
 
 // readfs.readDirectoryAsynchronously()
 // console.log(writefs.writeFileSynchronously.toString())
@@ -24,4 +25,6 @@ console.log('Amount of free memory in % : ' + fmemp);
 
 // stream.writeFileStream()
 // stream.createReadableStream()
-buffer.comparePartOfBuffer()
+// buffer.bufferFromText()
+let somevar = buff.readBufferFile();
+console.log(somevar);

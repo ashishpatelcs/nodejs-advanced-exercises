@@ -9,7 +9,7 @@ let allocateBuffer = () => {
 let bufferFromText = () => {
     let text = `Hello World
     Application is the first Application I've written!`
-    let textbuffer = Buffer.from(text)
+    let textbuffer = buffer.from(text)
     // let textbuffer = new Int8Array(text)
     console.log('Text buffer: ');
     console.log(textbuffer);

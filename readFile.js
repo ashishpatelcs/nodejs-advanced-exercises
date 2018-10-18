@@ -17,7 +17,6 @@ let readFileAsynchronously = () => {
     fs.readFile('example.txt', (err, myFile) => {
         console.log(myFile);
     })
-   
     fs.readFile('example.txt', 'utf-8', (err, encodedFile) => {
         console.log(encodedFile);
     })
